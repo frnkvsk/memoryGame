@@ -1,0 +1,105 @@
+
+body {
+    background: lightskyblue url('https://i.pinimg.com/originals/3c/24/46/3c24462450c2a902bf7e18f3d9aada81.jpg');    
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1 1 600px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    order: 2;
+    width: 50vw;
+    height: calc(100vw * 0.4);
+    font-size: 4vw;
+}
+
+.grid-item {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 1px;
+    border-radius: 10px;
+    transform: rotateY(-360deg);
+    transition-delay: 300ms;
+    transition-duration: 1000ms;
+    pointer-events: all;
+}
+
+.grid-item:hover {
+    cursor: pointer;
+}
+
+.flipped {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 1px;
+    border-radius: 10px;  
+    transform: rotateY(180deg);
+    transition-delay: 300ms;
+    transition-duration: 1000ms;
+    pointer-events: none;
+}
+
+.flipped:hover {
+    cursor: auto;
+}
+
+.control {    
+    display: flex;  
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: x-large;
+    color: white;
+    width: 13%;
+    height: 100%;
+    padding: 20px;
+}
+
+.startGame {    
+    background-color: rgb(127, 208, 255);
+    font-size: xx-large;
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    color: white;
+    margin: 5px 5px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: none;
+    transition: color 0.5s;
+}
+
+
+.startGame:hover {
+    background-color: rgb(127, 229, 255);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 920px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .control {        
+        font-size: small;
+        color: white;
+        align-items: center;
+        justify-items: center;
+        width: 40%;
+    }
+}
