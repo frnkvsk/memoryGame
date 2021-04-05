@@ -1,3 +1,3 @@
 # memoryGame
-Memory game for Springboard class  
+Memory game   
 https://frnkvsk.github.io/memoryGame/
